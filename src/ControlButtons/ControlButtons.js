@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ControlButtons = () => {
-  const { activated, onStart, onPause, onReset, onSplit } = this.props;
+const ControlButtons = (props) => {
+  const { activated, onStart, onPause, onReset, onSplit } = props;
   if(activated) {
     return (
       <div>
-        <button onclick={onSplit}>计次</button>
-        <button onclick={onPause}>停止</button>
+        <button onClick={onSplit}>计次</button>
+        <button onClick={onPause}>停止</button>
       </div>
     )
   } else {
     return (
       <div>
-        <button onclick={onStart}>启动</button>
-        <button onclick={onReset}>复位</button>
+        <button onClick={onStart}>启动</button>
+        <button onClick={onReset}>复位</button>
       </div>
     )
   }
