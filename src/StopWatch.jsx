@@ -52,12 +52,20 @@ class StopWatch extends React.Component {
   }
 
   render () {
-    const { currentTime, startTime} = this.state
+    const { currentTime, startTime, isStart} = this.state
   
     return (
       <React.Fragment>
+        <style jsx>{`
+          h2 {
+            color: green;
+            text-align: center;
+          }
+        `}</style>
+        <h2>秒表</h2>
         <MajorClock
           milliseconds = {currentTime-startTime}
+          activated={isStart}
         />
         <ControlButtons 
           activated={this.state.isStart}

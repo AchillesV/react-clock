@@ -4,8 +4,27 @@ import padStart from 'lodash/padStart'
 
 const MajorClock = (milliseconds = 0) => {
   const ms = milliseconds.milliseconds;
-  console.log(ms)
-  return <h1> {ms2Time(ms)} </h1>
+  console.log(milliseconds.activated)
+  const style = {
+    'fontFamily': '黑体',
+    'textAlign': 'center',
+    'fontSize': '33px',
+    'marginTop': '20px'
+  }
+
+  return (
+    <React.Fragment>
+      <style jsx>{`
+        h1 {
+          color: ${milliseconds.activated? 'red' : 'black'};
+          font-family: monospace;
+        }
+      `}</style>
+      <h1 style={style}> {ms2Time(ms)} </h1>
+
+    </React.Fragment>
+  )
+
 }
 
 const ms2Time = (milliseconds) => {

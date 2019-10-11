@@ -1,0 +1,28 @@
+.control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.left-btn, .right-btn {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  border: 1px solid gray;
+  font-size: 16px;
+  outline: none;
+  background-color: white;
+  
+}
+
+.left-btn {
+  margin: 0 36px 0 0 ;
+  color: green;
+  
+}
+
+.right-btn {
+  margin: 0 0 0 36px ;
+  
+}
